@@ -1,6 +1,5 @@
 require 'rake'
 
-
 require ::File.expand_path('../config/environment', __FILE__)
 
 # Include all of ActiveSupport's core class extensions, e.g., String#camelize
@@ -128,11 +127,3 @@ desc 'Start IRB with application environment loaded'
 task "console" do
   exec "irb -r./config/environment"
 end
-
-desc "Run the specs"
-  task "specs" do
-    require 'rspec/core/rake_task'
-    RSpec::Core::RakeTask.new(:spec)
-  end
-
-task :default  => :specs
